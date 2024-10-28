@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../font/lazy_dog.ttf');
+}
+
+.root {
+    -fx-font-family: 'Lazy Dog';
+    -fx-font-size: 20px;
+    -fx-background-color: #FFF8CA;
+    -fx-font-weight: bold;
+}
+
+.section-label {
+    -fx-font-size: 24px;
+}
+
+.button {
+    -fx-background-color: transparent;
+}
+
+.check-box {
+    -fx-padding: 5px;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.check-box:hover {
+    -fx-background-color: #00BBE3;
+    -fx-border-radius: 200px;
+}
+
+.check-box:pressed {
+    -fx-background-color: #00A8D2;
+    -fx-border-radius: 200px;
+}
+
+.button:hover {
+    -fx-background-color: #00BBE3;
+    -fx-border-radius: 200px;
+}
+
+.button:pressed {
+    -fx-background-color: #00A8D2;
+    -fx-border-radius: 200px;
+}
+
+.transparent-scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.transparent-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.evidence-options-grid-pane {
+    -fx-border-style: solid none solid none;
+    -fx-border-width: 3px;
+    -fx-padding: 15px 0px 15px 0px;
+    -fx-border-color: black;
+}
+
+.ghost-button {
+    -fx-font-size: 20px;
+}

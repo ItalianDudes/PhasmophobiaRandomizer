@@ -1,7 +1,7 @@
 package it.italiandudes.phasmophobia_randomizer.client.javafx.scenes;
 
 import it.italiandudes.phasmophobia_randomizer.client.javafx.components.SceneController;
-import it.italiandudes.phasmophobia_randomizer.client.javafx.controllers.ControllerSceneMainMenu;
+import it.italiandudes.phasmophobia_randomizer.client.javafx.controllers.ControllerSceneMain;
 import it.italiandudes.phasmophobia_randomizer.client.javafx.utils.JFXDefs;
 import it.italiandudes.phasmophobia_randomizer.utils.Defs;
 import it.italiandudes.idl.common.Logger;
@@ -19,7 +19,7 @@ public final class SceneMain {
         try {
             FXMLLoader loader = new FXMLLoader(Defs.Resources.get(JFXDefs.Resources.FXML.FXML_MAIN));
             Parent root = loader.load();
-            ControllerSceneMainMenu controller = loader.getController();
+            ControllerSceneMain controller = loader.getController();
             return new SceneController(root, controller);
         } catch (IOException e) {
             Logger.log(e);

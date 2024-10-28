@@ -27,7 +27,6 @@ public final class JFXDefs {
         // FXML Location
         public static final class FXML {
             private static final String FXML_DIR = "/fxml/";
-            public static final String FXML_LOADING = FXML_DIR + "SceneLoading.fxml";
             public static final String FXML_MAIN = FXML_DIR + "SceneMain.fxml";
         }
 
