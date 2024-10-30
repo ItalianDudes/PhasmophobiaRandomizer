@@ -1,10 +1,10 @@
 package it.italiandudes.phasmophobia_randomizer.client.javafx.scenes;
 
+import it.italiandudes.idl.common.Logger;
 import it.italiandudes.phasmophobia_randomizer.client.javafx.components.SceneController;
 import it.italiandudes.phasmophobia_randomizer.client.javafx.controllers.ControllerSceneMain;
 import it.italiandudes.phasmophobia_randomizer.client.javafx.utils.JFXDefs;
 import it.italiandudes.phasmophobia_randomizer.utils.Defs;
-import it.italiandudes.idl.common.Logger;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import org.jetbrains.annotations.NotNull;

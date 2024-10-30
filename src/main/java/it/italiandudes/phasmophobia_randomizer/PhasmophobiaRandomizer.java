@@ -1,8 +1,8 @@
 package it.italiandudes.phasmophobia_randomizer;
 
-import it.italiandudes.phasmophobia_randomizer.client.javafx.Client;
 import it.italiandudes.idl.common.InfoFlags;
 import it.italiandudes.idl.common.Logger;
+import it.italiandudes.phasmophobia_randomizer.client.javafx.Client;
 
 import java.io.IOException;
 

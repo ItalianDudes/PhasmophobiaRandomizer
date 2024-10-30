@@ -1,8 +1,8 @@
 package it.italiandudes.phasmophobia_randomizer.client.javafx;
 
+import it.italiandudes.idl.common.Logger;
 import it.italiandudes.phasmophobia_randomizer.client.javafx.scenes.SceneMain;
 import it.italiandudes.phasmophobia_randomizer.client.javafx.utils.JFXDefs;
-import it.italiandudes.idl.common.Logger;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Parent;
