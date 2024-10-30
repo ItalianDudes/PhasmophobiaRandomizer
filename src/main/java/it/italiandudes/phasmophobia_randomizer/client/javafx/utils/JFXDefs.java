@@ -5,7 +5,6 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.stage.Screen;
 
-@SuppressWarnings("unused")
 public final class JFXDefs {
 
     //App Info
@@ -30,29 +29,16 @@ public final class JFXDefs {
             public static final String FXML_MAIN = FXML_DIR + "SceneMain.fxml";
         }
 
-        // GIF Location
-        public static final class GIF {
-            private static final String GIF_DIR = "/gif/";
-            public static final String GIF_LOADING = GIF_DIR+"loading.gif";
-        }
-
         // Image Location
         public static final class Image {
             private static final String IMAGE_DIR = "/image/";
             public static final String IMAGE_LOGO = IMAGE_DIR+"app-logo.png";
-            public static final String IMAGE_FILE_EXPLORER = IMAGE_DIR+"file-explorer.png";
-        }
-
-        // Font Location
-        public static final class Font {
-            private static final String FONT_DIR = "/font/";
-            public static final String FONT_LAZY_DOG = FONT_DIR + "lazy_dog.ttf";
         }
 
         // CSS Location
         public static final class CSS {
             private static final String CSS_DIR = "/css/";
-            public static final String CSS_THEME = CSS_DIR + "dev_theme.css";
+            public static final String CSS_THEME = CSS_DIR + "theme.css";
         }
     }
 

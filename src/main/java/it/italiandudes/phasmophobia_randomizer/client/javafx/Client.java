@@ -8,8 +8,6 @@ import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.Clipboard;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -33,20 +31,6 @@ public final class Client extends Application {
         stage.setX((JFXDefs.SystemGraphicInfo.SCREEN_WIDTH - stage.getWidth()) / 2);
         stage.setY((JFXDefs.SystemGraphicInfo.SCREEN_HEIGHT - stage.getHeight()) / 2);
         stage.getScene().getWindow().addEventHandler(WindowEvent.WINDOW_CLOSE_REQUEST, event -> exit());
-
-        // Fullscreen Event Listener
-        stage.addEventFilter(KeyEvent.KEY_PRESSED, (KeyEvent event) -> {
-            if (event.getCode() == KeyCode.F11) {
-                if (!stage.isFullScreen()) {
-                    if (!stage.isMaximized()) {
-                        stage.setMaximized(true);
-                    }
-                    stage.setFullScreen(true);
-                }
-            } else if (event.getCode() == KeyCode.ESCAPE) {
-                if (stage.isFullScreen()) stage.setFullScreen(false);
-            }
-        });
 
         // Notice into the logs that the application started Successfully
         Logger.log("Application started successfully!");

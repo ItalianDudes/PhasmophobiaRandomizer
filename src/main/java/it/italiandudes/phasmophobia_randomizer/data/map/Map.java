@@ -4,6 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public enum Map {
     RANDOM("Casuale", MapSize.UNKNOWN),
+    PLAYER_CHOICE("Scelta del Giocatore", MapSize.UNKNOWN),
     TANGLEWOOD_DRIVE("6 Tanglewood Drive", MapSize.SMALL),
     RIDGEVIEW_COURT("10 Ridgeview Court", MapSize.SMALL),
     WILLOW_STREET("13 Willow Street", MapSize.SMALL),
