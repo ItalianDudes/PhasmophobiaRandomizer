@@ -58,6 +58,11 @@ public enum Equipment {
     public int getTierTwoToThreeThreshold() {
         return TIER_TWO_TO_THREE_THRESHOLD;
     }
+    public int getTierByTierChance(int tierChance) {
+        if (tierChance < TIER_ONE_TO_TWO_THRESHOLD) return 1;
+        else if (tierChance < TIER_TWO_TO_THREE_THRESHOLD) return 2;
+        else return 3;
+    }
     @Override @NotNull
     public String toString() {
         return getFullName();

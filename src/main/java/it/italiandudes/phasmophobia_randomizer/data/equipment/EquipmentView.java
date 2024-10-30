@@ -1,5 +1,6 @@
 package it.italiandudes.phasmophobia_randomizer.data.equipment;
 
+import it.italiandudes.phasmophobia_randomizer.data.map.MapSize;
 import it.italiandudes.phasmophobia_randomizer.utils.Randomizer;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,8 +25,10 @@ public final class EquipmentView {
         this.tier = String.valueOf(Randomizer.randomBetween(1, 3));
         this.quantity = String.valueOf(Randomizer.randomBetween(equipment.getMinQuantity(), equipment.getMaxQuantity()));
     }
-    public void doFairRandomization() {
-        // TODO: fair randomization
+    public void doFairRandomization(@NotNull final MapSize mapSize) {
+        int tierChance = (int) (Randomizer.randomBetween(0, 100) * mapSize.getDifficultyMultiplier());
+        this.tier = String.valueOf(equipment.getTierByTierChance(tierChance));
+        this.quantity = String.valueOf(Randomizer.randomBetween(equipment.getMinQuantity(), equipment.getMaxQuantity()));
     }
     public @NotNull Equipment getEquipment() {
         return equipment;

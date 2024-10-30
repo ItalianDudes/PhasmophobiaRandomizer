@@ -5,6 +5,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,25 +21,64 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints valignment="CENTER" vgrow="NEVER" />
-            <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="250.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="350.0" valignment="CENTER" vgrow="SOMETIMES" />
             <RowConstraints valignment="CENTER" vgrow="NEVER" />
         </rowConstraints>
          <children>
             <Label styleClass="title" text="Phasmophobia Randomizer" />
-            <GridPane hgap="5.0" GridPane.rowIndex="2">
-              <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
-              </rowConstraints>
+            <GridPane GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doCompleteRandomization" text="COMPLETE RANDOMIZER" />
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doFairRandomization" text="FAIR RANDOMIZER" GridPane.columnIndex="1" />
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="NEVER" />
+                        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Mappe Permesse" />
+                        <GridPane hgap="10.0" GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints valignment="CENTER" vgrow="NEVER" />
+                          </rowConstraints>
+                           <children>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addAllMaps" text="Aggiungi Tutto" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removeAllMaps" text="Rimuovi Tutto" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <ListView fx:id="listViewMap" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="NEVER" />
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Label contentDisplay="BOTTOM" maxHeight="1.7976931348623157E308" styleClass="title" text="Mappa" textAlignment="CENTER" wrapText="true" />
+                        <Label fx:id="labelRandomizedMap" maxHeight="1.7976931348623157E308" styleClass="title" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
                </children>
             </GridPane>
-            <TableView fx:id="tableViewEquipment" focusTraversable="false" GridPane.rowIndex="1">
+            <TableView fx:id="tableViewEquipment" focusTraversable="false" GridPane.rowIndex="2">
               <columns>
                 <TableColumn fx:id="tableColumnName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="700.0" sortable="false" text="EQUIPAGGIAMENTO" />
                 <TableColumn fx:id="tableColumnTier" editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" sortable="false" text="TIER" />
@@ -48,10 +88,23 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
+            <GridPane hgap="10.0" GridPane.rowIndex="3">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="buttonCompleteRandomization" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doCompleteRandomization" text="COMPLETE RANDOMIZER" />
+                  <Button fx:id="buttonFairRandomization" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doFairRandomization" text="FAIR RANDOMIZER" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
          </children>
       </GridPane>
    </children>
    <padding>
-      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
 </AnchorPane>
